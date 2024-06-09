@@ -3,6 +3,7 @@
 Finivo is a personal finance tracker designed to help you manage your income, expenses, and overall financial health. Created with basic frontend technologies (HTML5, CSS, and JavaScript), Finivo provides a seamless user experience for tracking your financial transactions.
 
 ## Preview 
+Live : https://r11shi.github.io/Finivo-Finance-Tracker/
 https://github.com/r11shi/Finivo-Finance-Tracker/assets/143253775/50ed92ca-bead-4c44-94be-58ccc4a5c2fa
 
 ## Features
