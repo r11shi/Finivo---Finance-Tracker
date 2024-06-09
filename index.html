@@ -1,0 +1,140 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Finivo | Dashboard</title>
+        <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="main">
+
+            <!---NavBar-->
+            <div class="left-nav">
+                
+                <div class="menu">
+                    <span class="opt">
+                        <a href="index.html">Dashboard</a>
+                        <a href="transaction.html">Transactions</a>
+                        <a href="about.html">About</a>
+                    </span>
+                </div>
+            </div>
+
+            <!-----main section-->
+            <div class="main-section">
+                
+                <div class="header">
+                    <img class="img1" src="./assets/logo.png" alt="">
+                    <a href="https://x.com/r11shidev"><img class="img2" src="./assets/pfp.png" alt=""></a>
+                </div>
+
+                <hr>
+
+                <div class="txt">
+                    <h1>Hello There!</h1>
+                    <p>Welcome to your finivo account! </p>
+                </div>
+
+                <!----div for editing the values-->
+                <div class="edit" id="edit">
+                    <div id="editForm">
+                        <div class="top2">
+                           <p>Edit Amount</p>
+                            <button class="closeEdit" onclick="closeEdit()">&times;</button>
+                        </div>
+                        <input type="number" id="editVal" placeholder="Enter value" required>
+                        <button id="changeBtn">Change</button>
+                    </div>
+                </div>
+
+                <div class="cards">
+                    <div class="bank card" id="card1" onclick="showEdit('card1')">
+
+                        <span>
+                            <p>Total Balance</p>
+                            <h1 id="acc-bal">₹65000</h1>
+                        </span>
+
+                        <p class="p">Edit →</p>
+
+                    </div>
+
+                    <div class="expense card" id="card2" onclick="showEdit('card2')">
+
+                        <span>
+                            <p>Expense</p>
+                            <h1 id="expense">₹10000</h1>
+                        </span>
+
+                        <p class="p">Edit →</p>
+
+                    </div>
+
+                    <div class="income card" id="card3" onclick="showEdit('card3')">
+                        <span>
+                        <p>Income</p>
+                        <h1 id="income">₹75000</h1>
+                        </span>
+                        <p class="p">Edit →</p>
+                    </div>
+                </div>
+                
+                <div class="txt">
+                    <h1>Transaction History</h1>
+                </div>
+
+                <div class="mid">
+                    <input id="searchbox" type="search" placeholder="  search" class="searchbox">
+                    <button id="addT" class="add">Add Transaction</button>
+                </div>
+
+                <table id="transactionTable" >
+                    <thead>
+                        <th>Date</th>
+                        <th>Amount</th>
+                        <th>Category</th>
+                        <th>Type</th>
+                        <th>Note</th>
+                    </thead>
+                    <tbody id="newTable" border="1px">
+                        
+                    </tbody>
+                </table>
+                
+                    <div id="tModal" class="modal">
+                        <div id="transactionForm" class="addModal">
+                            <div class="top">
+                                <p>New Transaction</p>
+                                <button class="closeModal" onclick="closeModal()">&times;</button>
+                            </div>
+                            
+                            <input type="date" id="date" required>
+                            <input type="number" id="amount" placeholder="Enter Amount"required>
+            
+                            <input list="category" id="cat" placeholder="Select Category" required>
+                            <datalist id="category">
+                                <option value="Select Category" disabled selected>
+                                <option value="Food">Food</option>
+                                <option value="Transport">Transport</option>
+                                <option value="Utilities">Utilities</option>
+                                <option value="Entertainment">Entertainment</option>
+                            </datalist>
+            
+                            <select name="type" id="type">
+                                <option value="Income">Income</option>
+                                <option value="Expense">Expense</option>
+                            </select>
+            
+                            <input type="text" id="note" placeholder="Enter a note">
+                            <button class="make" id="make" onclick="makeTransaction()">Make Transaction</button>
+                            
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+    </html>

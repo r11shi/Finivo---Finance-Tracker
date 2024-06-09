@@ -1,0 +1,300 @@
+*{
+    margin: 0;
+    font-family: Neue Montreal;
+    font-weight: 500;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --newgreen : #94FF8A;
+    --newred : #FF2525;
+    --newblue: #257CFF;
+}
+.left-nav{
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    position: fixed;
+    height: 100vh;
+    overflow-y: none;
+    border-right: 0.5px solid rgba(0, 0, 0, 0.379);
+}
+
+
+.opt{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.opt a{
+    text-decoration: none;
+    color: black;
+    padding: 15px;
+    font-size: 13px;
+}
+
+.opt a:hover{
+    border-radius: 20px;
+    background-color: #000000;
+    color: #fff;
+}
+
+.main-section{
+    margin-left: 15%;
+    display: flex;
+    flex-direction: column;
+}
+.header{
+    display: flex;
+    flex-direction: row;    
+    align-items: center;
+    justify-content: space-between;
+}
+.img1{
+    margin: 25px 30px;
+    width: 100px;
+}
+.img2{
+    margin: 25px 30px 25px auto;
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.txt{
+    margin:  30px 30px;
+    line-height: 1.5;
+}
+
+.txt h1{
+    font-size: 36px;
+}
+.txt p{
+    font-size: 18px;
+}
+.cards{
+    padding:  0px 30px;
+    display: flex;
+    gap: 40px;
+}
+.card{
+    width: 280px;
+    height: 180px;
+    padding: 0px;
+    border-radius: 15px;
+    border: 0.5px solid rgba(0, 0, 0, 0.499);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card span{
+    padding:20px;
+}
+
+.card .p{
+    padding: 20px;
+}
+
+.p a{
+    border-radius: 10px;
+    text-decoration: none;
+    color: #000000;
+}
+
+.income{
+    background-color: var(--newgreen);
+}
+.income:hover{
+    cursor: pointer;
+    background-color: #73d36d;
+    transform: scale(1.05);
+}
+.expense{
+    color: #fff;
+    background-color: var(--newred);
+}
+
+.expense:hover{
+    cursor: pointer;
+    background-color: #D42323;
+    transform: scale(1.05);
+}
+
+.expense .p a{
+    color: #fff;
+}
+
+.bank{
+    color: #fff;
+    background-color: var(--newblue);
+}
+
+.bank:hover{
+    cursor: pointer;
+    background-color: #1e64ce;
+    transform: scale(1.05);
+}
+
+.bank .p a{
+    color: #fff;
+}
+
+.mid{
+    margin: 0 30px 0 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mid input{
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.add{
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid black;
+    background-color: var(--newgreen);
+}
+.add:hover{
+    transform: scale(1.05);
+}
+table{
+    margin: 30px;
+    border-collapse: collapse;
+}
+table th{
+    
+    border: 1px solid black;
+    background-color: var(--newgreen);
+    padding: 10px;
+    text-align: center;
+    margin: 0; /* Removes any margin that might be causing gaps */
+}
+td{
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+.modal{
+    display: none;
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.329); 
+    align-items: center; 
+    justify-content: center;    
+}
+.addModal{
+    text-align: center;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 330px;
+    padding: 30px;
+    background-color: #e1e1e1;
+    gap: 20px;
+    border-radius: 5px;
+}   
+
+.addModal input , button, select, option{
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+.make{
+    background-color: #94FF8A;
+    cursor: pointer;
+}
+
+#date, #type{
+    cursor: pointer;
+}
+
+.addModal .top{
+    display: flex;
+    justify-content: space-between;
+}
+
+.closeModal{
+    border-radius: 0px;
+    padding: 3px 10px;
+    background-color: red;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.searchbox{
+    width: 300px;
+}
+
+.edit{
+    display: none;
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.329); 
+    align-items: center; 
+    justify-content: center;    
+}
+
+#editForm{
+    text-align: center;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    height: 120px;
+    padding: 30px;
+    background-color: #e1e1e1;
+    gap: 20px;
+    border-radius: 5px;
+}
+#editVal{
+    padding: 5px;
+    border-radius: 5px;
+}
+.top2{
+    display: flex;
+    justify-content: space-between;
+}
+
+#changeBtn{
+    cursor: pointer;
+}
+
+.closeEdit{
+    border-radius: 0px;
+    padding: 3px 10px;
+    background-color: red;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.about{
+    padding: 30px;
+}
+
+.socials button{
+    margin: 0 10px 0 0;
+    padding: 10px ;
+    cursor: pointer;
+}
+
+.socials button:hover{
+    color: #fff;
+    background-color: #24292e;
+}
